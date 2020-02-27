@@ -122,80 +122,182 @@ Supported by Tommy G. Thompson Center on Public Leadership}
 \section{Introduction}
 
 \begin{frame}
-  \frametitle{Werewolf}
-
-  Who are we, what are we doing.
+  \frametitle{Jacinda's 2017 election deal}
   
+  \begin{itemize}
+  \item Introduce a Zero Carbon Act and establish an independent Climate Commission.
+  \item Request the Climate Commission to plan the transition to 100\% renewable electricity by 2035 (which includes geothermal) in a normal hydrological year.
+  \item Stimulate up to \$1 billion of new investment in low carbon
+    industries by 2020, kick-started by a Government-backed Green
+    Investment fund of \$100M.
+    \end{itemize}
+(Confidence and Supply Agreement between the New Zealand Labour Party
+and the Green Party of Aoteoroa)
+
+\alert{Built model GEMSTONE that was used by New Zealand Climate Commission
+to help inform this policy}
+
 \end{frame}
 
 \begin{frame}
-  \frametitle{This talk is about}
+  \frametitle{New Zealand (NetZero)}
+  
+  \begin{columns}[T]
+    \begin{column}{0.4\linewidth}
+      \includegraphics[width=\textwidth]{includes/TotalCarbonv20.png}
+      \\
+      \includegraphics[width=\textwidth]{includes/TotalCostMv20.png}
+    \end{column}
+
+    \begin{column}{0.6\linewidth}
+      \includegraphics[width=\textwidth]{includes/Sco2rednv20.png}
+      % includes/TotalCarbonASv20.png}
+      \begin{itemize}
+      \item Policies matter: affects reduction amounts and cost
+      \item Portfolio of required technologies becomes complex as
+        reduction increases
+      \item Uncertainties and incentives key
+      \item November 2019 climate act provides framework
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  
+\end{frame}
+
+
+\exclude{
+    Who are we, what are we doing.
+
+  If we think of the goal for this talk as two-fold:  1) to describe
+  WEREWOLF and 2) to pique their interest to participate in the policy
+  discussion.
+  
+I would recommend to keep it high-level description to start and focus on the value proposition to ask them for their involvement.  They can ask you more detailed questions about the model in the Q\&A afterwards if they are interested.
+
+I like the flow so far and the outputs in slides 6-10.  Although, I think we don't need to show them outputs for this meeting, as it is more of a briefing on WEREWOLF, where we are going with it and inviting them to participate if they are interested.
+
+To gather their interest, we should focus on the value proposition for WEREWOLF to help guide government policy and, to some extent, utility investment decisions based on that policy.  
+}
+
+\begin{frame}
+  \frametitle{Werewolf (Wisconsin Expansion of Renewable Electricity with Optimization under Long-term Forecasts)}
+
+  \centering
+  \includegraphics[width=0.8\textwidth]{includes/timescales.pdf}
 
   \begin{itemize}
-  \item Operations research: helping government policy ...
+  \item Design/policy decisions affecting operations/reliability and vice-versa
+  \item Goal: to help policy and decision makers ...
     \begin{itemize}
     \item to distinguish between objectives and actions;
     \item to understand effects of uncertainty;
-    \item to understand effects of incentives.
+    \item to understand effects of incentives;
+    \item to explore larger design space.
     \end{itemize}
   \end{itemize}
+
 \end{frame}
 
 \begin{frame}
 \frametitle{Simplified two-stage stochastic optimization model}
 \begin{itemize}
 \item Capacity decisions are $z$ at cost $K(z)$
-\item Operating decisions are: generation $y$ at cost $C(y)$,
-loadshedding $r$ at cost $Vr$.
-\item Random demand is $d(\omega)$.
+\item Operating decisions: generation $y$ at cost $C(y)$,
+loadshedding $q$ at cost $Vq$.
+\item Scenarios (futures) $\omega$, demand (load curve) is $d(\omega)$.
 \item Minimize capital cost plus expected operating cost:
 \end{itemize}
 \begin{center}
 $%
 \begin{array}{rrcl}
-\text{P:}\quad \displaystyle \min_{(z, y, r) \in X} & \quad K(z)  & + & \expect_{\omega }[%
-C(y(\omega )) + Vr(\omega)] \\[1em]
+\min & \quad K(z)  & + & \expect_{\omega }[%
+C(y(\omega )) + Vq(\omega)] \\[1em]
 \text{s.t.} & \quad 
 \textcolor{black}{y(\omega)} & \textcolor{black}{\leq} & %
 \textcolor{black}{z} \\
-& \textcolor{black}{y(\omega) + r(\omega)} & \textcolor{black}{\geq} & %
+& \textcolor{black}{y(\omega) + q(\omega)} & \textcolor{black}{\geq} & %
                                                                        \textcolor{black}{d(\omega)}
-%\\ &  \alert{z_{\mathcal{N}}} & \leq & \alert{(1-\theta) z_{\mathcal{N}}(2017)}
-
+  \\
+& (z, y, q) & \in & X
 \end{array}%
 $
 \end{center}
 \begin{itemize}
-\item Model populated using data from Wisconsin
+\item WEREWOLF populated using data from Wisconsin: develop the model
+  for MISO and look at Wisconsin policies in particular
+\item Data and structure facilitate any US
+  regional model
 \end{itemize}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Environmental constraints}
-Some capacity $z_k$, $k \in \mathcal{N}$, is ``non renewable''.
-Some generation $y_k (\omega)$, $k \in \mathcal{E}$ emits $\beta_k y_k
-(\omega)$ tonnes of CO2. For a choice of $\theta \in [0, 1]$
-constraint is either:
-\begin{enumerate}
-\item Reduce \alert{CO2 emissions} compared with 2017:
-%  \[  \green{\expect_{\omega} [\sum_{k\in \mathcal{E}} \beta_k y_k(\omega)] \leq
-%      (1-\theta) \expect_{\omega} [\sum_{k\in \mathcal{E}} \beta_k
-%      y_k(\omega,2017)] }
-%  \]
-\item Reduce \alert{non-renewable capacity} compared with 2017:
-%  \[ \blue{\sum_{k\in \mathcal{N}} z_k\leq (1-\theta)  \sum_{k\in
-%        \mathcal{N}} z_k(2017) }
-%  \]
-\item Reduce \alert{non-renewable generation} compared with 2017:
-%  \[ \orange{\expect_{\omega} [\sum_{k\in \mathcal{N}} y_k(\omega)] \leq
-%      (1-\theta)  \expect_{\omega} [\sum_{k\in \mathcal{N}}
-%      y_k(\omega,2017)] }
-%  \]
-\end{enumerate}
-%Could impose constraints almost surely instead of in expectation or
-%with risk measure
+  \frametitle{The data}
+
+  Some figures that represent different facets of the data.
+  Solar/wind etc.
+
 \end{frame}
 
+
+
+\begin{frame}
+  \frametitle{Carbon leakage}
+
+Look at spatial effects when allow imports of non-renewable energy unlimited or flat.
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Increased demand}
+
+Cost effects (and possible changes in portfolio of generation) when
+have increased demand.  Flat imports.
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Environmental constraints: Capacity or CO2 reduction}
+
+Reduce capacity of plants compared to reduction in CO2 emissions. Flat imports.
+\begin{enumerate}
+\item Reduce \alert{CO2 emissions} compared with 2017:
+\item Reduce \alert{non-renewable capacity} compared with 2017:
+\item Reduce \alert{non-renewable generation} compared with 2017:
+\end{enumerate}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Limits on technology expansion}
+
+Could limit capacity expansion on certain technologies, or could have flat imports on non-renewable generation and different limits on non-renewable imports.   Or could just limit wind and see what takes up the slack (with flat imports).
+\end{frame}
+
+\begin{frame}
+  \frametitle{Conclusions}
+  \begin{itemize}
+  \item Models can inform policy
+  \item Models can show effects and costs of constraints
+  \item Investment is coupled to reliability
+      \item The model is currently being refined, and we are interested to get feedback from utility and policy experts about how this model would be useful in your utility and regulatory planning efforts (by April-May) 
+  \item  here's how to get in touch with us if you should be interested in a one-on-one demonstration of the model and/or a brief interview to discuss possible policy interventions - we would anticipate after this first round of WEREWOLF (funded by TT Center) that we will be exploring additional opportunities to partner with stakeholders to further evolve the model with the goal of making it as useful as possible to policy stakeholders (such as through ARPA-E or other funding sources down the road).
+  \end{itemize}
+\end{frame}
+
+\appendix
+
+\begin{frame}
+In the Appendix, you could include information about the model (the
+current slides 4, 5) for example.
+\begin{itemize}
+  \item \color{black} Very large scale models (many agents with many instruments
+    acting strategically) with risk are hard
+  \item \alert{New algorithms enable solution of more detailed,
+      authentic problems and address underlying policy questions}
+  \item Evaluation via simulation computations and out-of-sample testing
+\end{itemize}
+\end{frame}
+  
 \begin{frame}
   % \frametitle{Compare CO2 emissions from reduction strategies}
   \centering
@@ -256,22 +358,6 @@ constraint is either:
 \end{frame}
 }
 
-\begin{frame}
-  \frametitle{Carbon emissions (almost sure)}
-
-\includegraphics[width=0.5\textwidth]{includes/TotalCarbonv20.png}
-\includegraphics[width=0.5\textwidth]{includes/TotalCarbonASv20.png}
-
-\begin{itemize}
-\item Average reduction, vs reduction {\em in every scenario}
-\item Significant differences only at relatively low levels of CO$_{2}$
-reduction
-\item Single year, 2005, in which the emissions are significantly higher
-than all the others in the average case, but is compensated for by
-reduced emissions in other  years.
-\end{itemize}
-\end{frame}
-
 \exclude{
 \begin{frame}
   \frametitle{Technologies (chance constraints):
@@ -289,19 +375,5 @@ Force zero emissions in at least 50\% of years (normal hydrology)\\
 
 \end{frame}
 }
-
-\begin{frame}
-  \frametitle{Conclusions}
-  \begin{itemize}
-  \item Models can inform policy
-  \item Models can show effects and costs of constraints
-  \item Investment is coupled to reliability
-  \item \color{black} Very large scale models (many agents with many instruments
-    acting strategically) with risk are hard
-  \item \alert{New algorithms enable solution of more detailed,
-      authentic problems and address underlying policy questions}
-  \item Evaluation via simulation computations and out-of-sample testing
-  \end{itemize}
-\end{frame}
 
 \end{document}
