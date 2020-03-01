@@ -87,14 +87,14 @@
 
 % \renewcommand{arraystretch}{1.4}
 \newenvironment{mytikzpicture}{\noindent\ignorespaces\begin{tikzpicture}}{\end{tikzpicture}\ignorespacesafterend}
-\tikzstyle{sensor}=[draw, fill=blue!20, text width=5em, 
+\tikzstyle{sensor}=[draw, fill=blue!20, text width=5em,
     text centered, minimum height=2.5em,drop shadow]
 \tikzstyle{ann} = [above, text width=5em, text centered]
-\tikzstyle{wa} = [sensor, text width=5em, fill=red!20, 
+\tikzstyle{wa} = [sensor, text width=5em, fill=red!20,
     minimum height=3em, rounded corners, drop shadow]
-\tikzstyle{sc} = [sensor, text width=13em, fill=red!20, 
+\tikzstyle{sc} = [sensor, text width=13em, fill=red!20,
     minimum height=10em, rounded corners, drop shadow]
-\tikzstyle{notimpl}=[draw, semitransparent, fill=blue!20, text width=5em, 
+\tikzstyle{notimpl}=[draw, semitransparent, fill=blue!20, text width=5em,
 text centered, minimum height=2.5em]%,drop shadow]
 \def\blockdist{2}
 \def\edgedist{2.5}
@@ -123,7 +123,7 @@ Supported by Tommy G. Thompson Center on Public Leadership}
 
 \begin{frame}
   \frametitle{Jacinda's 2017 election deal}
-  
+
   \begin{itemize}
   \item Introduce a Zero Carbon Act and establish an independent Climate Commission.
   \item Request the Climate Commission to plan the transition to 100\% renewable electricity by 2035 (which includes geothermal) in a normal hydrological year.
@@ -141,7 +141,7 @@ to help inform this policy}
 
 \begin{frame}
   \frametitle{New Zealand (NetZero)}
-  
+
   \begin{columns}[T]
     \begin{column}{0.4\linewidth}
       \includegraphics[width=\textwidth]{includes/TotalCarbonv20.png}
@@ -161,7 +161,7 @@ to help inform this policy}
       \end{itemize}
     \end{column}
   \end{columns}
-  
+
 \end{frame}
 
 
@@ -171,12 +171,12 @@ to help inform this policy}
   If we think of the goal for this talk as two-fold:  1) to describe
   WEREWOLF and 2) to pique their interest to participate in the policy
   discussion.
-  
+
 I would recommend to keep it high-level description to start and focus on the value proposition to ask them for their involvement.  They can ask you more detailed questions about the model in the Q\&A afterwards if they are interested.
 
 I like the flow so far and the outputs in slides 6-10.  Although, I think we don't need to show them outputs for this meeting, as it is more of a briefing on WEREWOLF, where we are going with it and inviting them to participate if they are interested.
 
-To gather their interest, we should focus on the value proposition for WEREWOLF to help guide government policy and, to some extent, utility investment decisions based on that policy.  
+To gather their interest, we should focus on the value proposition for WEREWOLF to help guide government policy and, to some extent, utility investment decisions based on that policy.
 }
 
 \begin{frame}
@@ -212,7 +212,7 @@ $%
 \begin{array}{rrcl}
 \min & \quad K(z)  & + & \expect_{\omega }[%
 C(y(\omega )) + Vq(\omega)] \\[1em]
-\text{s.t.} & \quad 
+\text{s.t.} & \quad
 \textcolor{black}{y(\omega)} & \textcolor{black}{\leq} & %
 \textcolor{black}{z} \\
 & \textcolor{black}{y(\omega) + q(\omega)} & \textcolor{black}{\geq} & %
@@ -233,19 +233,58 @@ $
 \begin{frame}
   \frametitle{The data}
 
-  Some figures that represent different facets of the data.
-  Solar/wind etc.
+\begin{itemize}
+  \item WEREWOLF is data rich (Data from: EPA NEEDS/Integrated Planning Model, NREL ReEDS model data, NREL Annual Technology Baseline)
+  \item Data is downscaled to county level - \emph{user can customize regions as aggregations of these counties}
+  \item Spatial impacts are captured in visualizations
+\end{itemize}
+
+% I don't know how to make a super nice grid of images here... just putting in the links to images that could go on this slide... needs some help
+  \includegraphics[width=0.25\textwidth]{includes/data_offshore_wind.png}
+  \includegraphics[width=0.25\textwidth]{includes/data_onshore_wind.png}
+  \includegraphics[width=0.25\textwidth]{includes/data_solar.png}
+  \includegraphics[width=0.25\textwidth]{includes/data_network_browser_view.png}
+  \includegraphics[width=0.25\textwidth]{includes/data_network_no_browser_w_popup.png}
+
+% an example load duration curve and the piecewise constant fit that WEREWOLF uses
+  \includegraphics[width=0.25\textwidth]{includes/LDC_node_IL_CHI.png}
 
 \end{frame}
-
 
 
 \begin{frame}
   \frametitle{Carbon leakage}
 
-Look at spatial effects when allow imports of non-renewable energy unlimited or flat.
+\begin{itemize}
+  \item Look at spatial effects when allow 1) un-restricted imports of energy 2) no new imports of electricity
+\end{itemize}
+
+% the story here is that unrestricted imports allows WI to get to deep carbon reductions... but there might be deficiencies with the transmission network model description
+
+% when you don't have carbon leakage the story is that emissions could get to -40% by expanding out nat-gas combined cycle power plants without too much pain, but going to deep carbon reductions will require wind (and a little bit of solar)
+
+  \includegraphics[width=0.2\textwidth]{includes/carbonleak_net_imports.png}
+  \includegraphics[width=0.2\textwidth]{includes/no_carbonleak_net_imports.png}
+
+  \includegraphics[width=0.2\textwidth]{includes/carbonleak_WI_capacity.png}
+  \includegraphics[width=0.2\textwidth]{includes/no_carbonleak_WI_capacity.png}
+
+  % this is where combined cycle is built under at 40% carbon emissions reductions
+  \includegraphics[width=0.2\textwidth]{includes/no_carbonleak_CC_r3_built_cap.png}
+
+  % this is where wind is built under at 60% carbon emissions reductions
+  \includegraphics[width=0.2\textwidth]{includes/no_carbonleak_wind_r4_built_cap.png}
+
+  % this is where wind is built under at 80% carbon emissions reductions
+  \includegraphics[width=0.2\textwidth]{includes/no_carbonleak_wind_r5_built_cap.png}
+
+
+
 
 \end{frame}
+
+
+
 
 \begin{frame}
   \frametitle{Increased demand}
@@ -253,7 +292,26 @@ Look at spatial effects when allow imports of non-renewable energy unlimited or 
 Cost effects (and possible changes in portfolio of generation) when
 have increased demand.  Flat imports.
 
+% I assume flat imports = to the baseline scenario, exports are not limited
+% I increase the load by a factor for all regions and all load blocks
+
+% the story here is that even modest increases in demand (5%) lead to big changes and the model can go infeasible with the expansion limits I have set as an assumption
+
+% WI will want to expand out fossil generation, but at a point, we reach the fossil expansion limits and the model will want build solar like crazy... also pushes WI into a net exporter of energy
+
+% this shows the increase in emissions for both control regions (WI) and non-control regions
+\includegraphics[width=0.25\textwidth]{includes/demand_up_emissions.png}
+
+% this shows the impact on power flows through the network (still under the no new imports assumption)
+\includegraphics[width=0.25\textwidth]{includes/demand_up_net_imports.png}
+
+
+
 \end{frame}
+
+
+
+
 
 \begin{frame}
   \frametitle{Environmental constraints: Capacity or CO2 reduction}
@@ -279,7 +337,7 @@ Could limit capacity expansion on certain technologies, or could have flat impor
   \item Models can inform policy
   \item Models can show effects and costs of constraints
   \item Investment is coupled to reliability
-      \item The model is currently being refined, and we are interested to get feedback from utility and policy experts about how this model would be useful in your utility and regulatory planning efforts (by April-May) 
+      \item The model is currently being refined, and we are interested to get feedback from utility and policy experts about how this model would be useful in your utility and regulatory planning efforts (by April-May)
   \item  here's how to get in touch with us if you should be interested in a one-on-one demonstration of the model and/or a brief interview to discuss possible policy interventions - we would anticipate after this first round of WEREWOLF (funded by TT Center) that we will be exploring additional opportunities to partner with stakeholders to further evolve the model with the goal of making it as useful as possible to policy stakeholders (such as through ARPA-E or other funding sources down the road).
   \end{itemize}
 \end{frame}
@@ -297,7 +355,7 @@ current slides 4, 5) for example.
   \item Evaluation via simulation computations and out-of-sample testing
 \end{itemize}
 \end{frame}
-  
+
 \begin{frame}
   % \frametitle{Compare CO2 emissions from reduction strategies}
   \centering
