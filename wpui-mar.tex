@@ -259,24 +259,77 @@ $
   \item Look at spatial effects when allow 1) un-restricted imports of energy 2) no new imports of electricity
 \end{itemize}
 
-% the story here is that unrestricted imports allows WI to get to deep carbon reductions... but there might be deficiencies with the transmission network model description
+% the story here is that unrestricted imports allows WI to get to deep carbon reductions with the caveat that there might be deficiencies with the transmission network model description
 
-% when you don't have carbon leakage the story is that emissions could get to -40% by expanding out nat-gas combined cycle power plants without too much pain, but going to deep carbon reductions will require wind (and a little bit of solar)
+% carbon reductions (0-40%) under a no leakage scenario come from shutting down coal steam plants and expand in combined cycle (nat gas) plants
 
-  \includegraphics[width=0.2\textwidth]{includes/carbonleak_net_imports.png}
-  \includegraphics[width=0.2\textwidth]{includes/no_carbonleak_net_imports.png}
+% carbon reductions (40-80%) come from a reduction in generation from those combined cycle plants and expansion in wind (and little bit of solar)
 
-  \includegraphics[width=0.2\textwidth]{includes/carbonleak_WI_capacity.png}
-  \includegraphics[width=0.2\textwidth]{includes/no_carbonleak_WI_capacity.png}
+  \includegraphics[width=0.2\textwidth]{includes/leakage_net_imports.png}
+  \includegraphics[width=0.2\textwidth]{includes/no_leakage_net_imports.png}
 
-  % this is where combined cycle is built under at 40% carbon emissions reductions
-  \includegraphics[width=0.2\textwidth]{includes/no_carbonleak_CC_r3_built_cap.png}
+  \includegraphics[width=0.2\textwidth]{includes/leakage_WI_capacity.png}
+  \includegraphics[width=0.2\textwidth]{includes/no_leakage_WI_capacity.png}
 
-  % this is where wind is built under at 60% carbon emissions reductions
-  \includegraphics[width=0.2\textwidth]{includes/no_carbonleak_wind_r4_built_cap.png}
+  % this is the actual generation for the carbon leak scenario (WI only)
+  \includegraphics[width=0.2\textwidth]{includes/leakage_agg_generation_cntlreg.png}
 
-  % this is where wind is built under at 80% carbon emissions reductions
-  \includegraphics[width=0.2\textwidth]{includes/no_carbonleak_wind_r5_built_cap.png}
+  % this is the actual generation for the NO carbon leak scenario (WI only)
+  \includegraphics[width=0.2\textwidth]{includes/no_leakage_agg_generation_cntlreg.png}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Carbon leakage}
+
+  % this series of maps shows combined cycle generation ramping up and then shutting down.
+  % Note that the units here are in % change from baseline for clarity of change
+
+  % 0% reduction (baseline)
+  \includegraphics[width=0.2\textwidth]{includes/no_leakage_CC_r0.png}
+  % 20% reduction
+  \includegraphics[width=0.2\textwidth]{includes/no_leakage_CC_r1.png}
+  % 40% reduction
+  \includegraphics[width=0.2\textwidth]{includes/no_leakage_CC_r2.png}
+  % 60% reduction
+  \includegraphics[width=0.2\textwidth]{includes/no_leakage_CC_r3.png}
+  % 80% reduction
+  \includegraphics[width=0.2\textwidth]{includes/no_leakage_CC_r4.png}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Carbon leakage}
+
+  % this series of maps shows where wind generation ramps up.
+  % Note that units here are GWh... it shows the change better because most counties in WI do not currently have wind generation which makes calculating the % change from baseline awkward
+
+  % all the wind here is onshore
+
+  % 0% reduction (baseline)
+  \includegraphics[width=0.2\textwidth]{includes/no_leakage_wind_r0.png}
+  % 20% reduction
+  \includegraphics[width=0.2\textwidth]{includes/no_leakage_wind_r1.png}
+  % 40% reduction
+  \includegraphics[width=0.2\textwidth]{includes/no_leakage_wind_r2.png}
+  % 60% reduction
+  \includegraphics[width=0.2\textwidth]{includes/no_leakage_wind_r3.png}
+  % 80% reduction
+  \includegraphics[width=0.2\textwidth]{includes/no_leakage_wind_r4.png}
+
+\end{frame}
+
+
+
+
+  % % this is where combined cycle is built under at 40% carbon emissions reductions
+  % \includegraphics[width=0.2\textwidth]{includes/no_leakage_CC_r3_built_cap.png}
+  %
+  % % this is where wind is built under at 60% carbon emissions reductions
+  % \includegraphics[width=0.2\textwidth]{includes/no_leakage_wind_r4_built_cap.png}
+  %
+  % % this is where wind is built under at 80% carbon emissions reductions
+  % \includegraphics[width=0.2\textwidth]{includes/no_leakage_wind_r5_built_cap.png}
 
 
 
@@ -295,15 +348,24 @@ have increased demand.  Flat imports.
 % I assume flat imports = to the baseline scenario, exports are not limited
 % I increase the load by a factor for all regions and all load blocks
 
-% the story here is that even modest increases in demand (5%) lead to big changes and the model can go infeasible with the expansion limits I have set as an assumption
+% the story here is that even modest increases in demand (5%) lead to big changes.  new demand is met with expansion in nat-gas technologies (combustion turbine and combine cycle plants)
 
-% WI will want to expand out fossil generation, but at a point, we reach the fossil expansion limits and the model will want build solar like crazy... also pushes WI into a net exporter of energy
+% also pushes WI into a net exporter of energy
 
 % this shows the increase in emissions for both control regions (WI) and non-control regions
-\includegraphics[width=0.25\textwidth]{includes/demand_up_emissions.png}
+\includegraphics[width=0.20\textwidth]{includes/demand_agg_emissions.png}
 
-% this shows the impact on power flows through the network (still under the no new imports assumption)
-\includegraphics[width=0.25\textwidth]{includes/demand_up_net_imports.png}
+% this shows the impact on power flows through the network (no leakage assumption)
+\includegraphics[width=0.20\textwidth]{includes/demand_agg_exim.png}
+
+% shows generation portfolio in WI
+\includegraphics[width=0.20\textwidth]{includes/demand_agg_generation_cntlreg.png}
+
+% shows investment costs by region (note that model is restricted to only allow investments in WI)
+\includegraphics[width=0.20\textwidth]{includes/demand_invest_costs_by_region.png.png}
+
+% shows operational costs by region
+\includegraphics[width=0.20\textwidth]{includes/demand_operate_costs_by_region.png}
 
 
 
