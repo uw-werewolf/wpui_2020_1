@@ -234,56 +234,62 @@ $
   \frametitle{The data}
 
 \begin{itemize}
-  \item WEREWOLF is data rich (Data from: EPA NEEDS/Integrated Planning Model, NREL ReEDS model data, NREL Annual Technology Baseline)
+  \item WEREWOLF is data rich (EPA NEEDS/Integrated Planning Model, NREL ReEDS model data, NREL Annual Technology Baseline)
+% I don't know how to make a super nice grid of images here... just putting in the links to images that could go on this slide... needs some help
+  \includegraphics[width=0.25\textwidth]{includes/data_offshore_wind.png}\hspace*{0.2in}
+  \includegraphics[width=0.25\textwidth]{includes/data_onshore_wind.png}\hspace*{0.2in}
+  \includegraphics[width=0.25\textwidth]{includes/data_solar.png} 
   \item Data is downscaled to county level - \emph{user can customize regions as aggregations of these counties}
   \item Spatial impacts are captured in visualizations
 \end{itemize}
-
-% I don't know how to make a super nice grid of images here... just putting in the links to images that could go on this slide... needs some help
-  \includegraphics[width=0.25\textwidth]{includes/data_offshore_wind.png}
-  \includegraphics[width=0.25\textwidth]{includes/data_onshore_wind.png}
-  \includegraphics[width=0.25\textwidth]{includes/data_solar.png}
-  \includegraphics[width=0.25\textwidth]{includes/data_network_browser_view.png}
-  \includegraphics[width=0.25\textwidth]{includes/data_network_no_browser_w_popup.png}
-
+\centering
+  \includegraphics[width=0.30\textwidth]{includes/data_network_browser_view.png}\hspace*{0.2in}
+%  \includegraphics[width=0.25\textwidth]{includes/data_network_no_browser_w_popup.png}
+%
 % an example load duration curve and the piecewise constant fit that WEREWOLF uses
-  \includegraphics[width=0.25\textwidth]{includes/LDC_node_IL_CHI.png}
+  \includegraphics[width=0.45\textwidth]{includes/LDC_node_IL_CHI.png}
 
 \end{frame}
 
 
 \begin{frame}
-  \frametitle{Carbon leakage}
-
-\begin{itemize}
-  \item Look at spatial effects when allow 1) un-restricted imports of energy 2) no new imports of electricity
-\end{itemize}
+  \frametitle{Carbon leakage (increasing or flat imports)}
 
 % the story here is that unrestricted imports allows WI to get to deep carbon reductions... but there might be deficiencies with the transmission network model description
 
 % when you don't have carbon leakage the story is that emissions could get to -40% by expanding out nat-gas combined cycle power plants without too much pain, but going to deep carbon reductions will require wind (and a little bit of solar)
 
-  \includegraphics[width=0.2\textwidth]{includes/carbonleak_net_imports.png}
-  \includegraphics[width=0.2\textwidth]{includes/no_carbonleak_net_imports.png}
+  \begin{columns}[T]
+    \begin{column}{0.5\linewidth}
+      \includegraphics[width=0.8\textwidth]{includes/carbonleak_net_imports.png}
+      \\
+      \includegraphics[width=0.8\textwidth]{includes/carbonleak_WI_capacity.png}
+    \end{column}
 
-  \includegraphics[width=0.2\textwidth]{includes/carbonleak_WI_capacity.png}
-  \includegraphics[width=0.2\textwidth]{includes/no_carbonleak_WI_capacity.png}
-
-  % this is where combined cycle is built under at 40% carbon emissions reductions
-  \includegraphics[width=0.2\textwidth]{includes/no_carbonleak_CC_r3_built_cap.png}
-
-  % this is where wind is built under at 60% carbon emissions reductions
-  \includegraphics[width=0.2\textwidth]{includes/no_carbonleak_wind_r4_built_cap.png}
-
-  % this is where wind is built under at 80% carbon emissions reductions
-  \includegraphics[width=0.2\textwidth]{includes/no_carbonleak_wind_r5_built_cap.png}
-
-
-
-
+    \begin{column}{0.5\linewidth}
+      \includegraphics[width=0.8\textwidth]{includes/no_carbonleak_net_imports.png}
+      \\
+      \includegraphics[width=0.8\textwidth]{includes/no_carbonleak_WI_capacity.png}
+    \end{column}
+  \end{columns}
 \end{frame}
 
+\begin{frame}
+  \frametitle{Combined cycle deployment}
 
+\begin{itemize}
+  \item Spatial effects for combined cycle under 40\%, 60\%
+    and 80\% reductions
+\end{itemize}
+
+  % this is where combined cycle is built under at 40% carbon emissions reductions
+  \includegraphics[width=0.33\textwidth]{includes/no_carbonleak_CC_r3_built_cap.png}
+  % this is where wind is built under at 60% carbon emissions reductions
+  \includegraphics[width=0.33\textwidth]{includes/no_carbonleak_wind_r4_built_cap.png}
+  % this is where wind is built under at 80% carbon emissions reductions
+  \includegraphics[width=0.33\textwidth]{includes/no_carbonleak_wind_r5_built_cap.png}
+
+\end{frame}
 
 
 \begin{frame}
@@ -300,12 +306,10 @@ have increased demand.  Flat imports.
 % WI will want to expand out fossil generation, but at a point, we reach the fossil expansion limits and the model will want build solar like crazy... also pushes WI into a net exporter of energy
 
 % this shows the increase in emissions for both control regions (WI) and non-control regions
-\includegraphics[width=0.25\textwidth]{includes/demand_up_emissions.png}
-
+\includegraphics[width=0.4\textwidth]{includes/demand_up_emissions.png}
+%
 % this shows the impact on power flows through the network (still under the no new imports assumption)
-\includegraphics[width=0.25\textwidth]{includes/demand_up_net_imports.png}
-
-
+\includegraphics[width=0.4\textwidth]{includes/demand_up_net_imports.png}
 
 \end{frame}
 
