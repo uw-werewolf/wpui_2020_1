@@ -227,8 +227,7 @@ $
 \begin{itemize}
 \item WEREWOLF populated using data from Wisconsin: develop the model
   for MISO and look at Wisconsin policies in particular
-\item Data and structure facilitate any US
-  regional model
+\item Data and structure facilitate any US regional model
 \end{itemize}
 \end{frame}
 
@@ -254,221 +253,278 @@ $
 \end{frame}
 
 
+% THIS SLIDE SHOWS RESULTS FROM RUNS THAT DID NOT ALLOW SHUTDOWNS
 \begin{frame}
   \frametitle{Carbon leakage (increasing or flat imports)}
 
+\begin{itemize}
+  \item Demand in 2030 is a data input, but what is the right investment now for this new demand?
+  \item What is the right action (shutdown/investment) for this new demand + additional policies?
+
 % the story here is that unrestricted imports allows WI to get to deep carbon reductions with the caveat that there might be deficiencies with the transmission network model description
 
-% carbon reductions (0-40%) under a no leakage scenario come from shutting down coal steam plants and expand in combined cycle (nat gas) plants
+  \includegraphics[width=0.2\textwidth]{includes/leakage_no_shutdowns_agg_exim.png}
+  \includegraphics[width=0.2\textwidth]{includes/no_leakage_no_shutdowns_agg_exim.png}
 
-% carbon reductions (40-80%) come from a reduction in generation from those combined cycle plants and expansion in wind (and little bit of solar)
-
-  \includegraphics[width=0.2\textwidth]{includes/leakage_net_imports.png}
-  \includegraphics[width=0.2\textwidth]{includes/no_leakage_net_imports.png}
-
-  \includegraphics[width=0.2\textwidth]{includes/leakage_WI_capacity.png}
-  \includegraphics[width=0.2\textwidth]{includes/no_leakage_WI_capacity.png}
+  \includegraphics[width=0.2\textwidth]{includes/leakage_no_shutdowns_agg_capacity_cntlreg.png}
+  \includegraphics[width=0.2\textwidth]{includes/no_leakage_no_shutdowns_agg_capacity_cntlreg.png}
 
   % this is the actual generation for the carbon leak scenario (WI only)
-  \includegraphics[width=0.2\textwidth]{includes/leakage_agg_generation_cntlreg.png}
+  \includegraphics[width=0.2\textwidth]{includes/leakage_no_shutdowns_agg_generation_cntlreg.png}
 
   % this is the actual generation for the NO carbon leak scenario (WI only)
-  \includegraphics[width=0.2\textwidth]{includes/no_leakage_agg_generation_cntlreg.png}
+  \includegraphics[width=0.2\textwidth]{includes/no_leakage_no_shutdowns_agg_generation_cntlreg.png}
+
+\end{itemize}
 
 \end{frame}
 
+
+% THIS SLIDE SHOWS RESULTS FROM RUNS THAT DID ALLOW SHUTDOWNS
+\begin{frame}
+  \frametitle{Carbon leakage (increasing or flat imports)}
+
+  \item Demand in 2030 is a data input, but what is the right investment now for this new demand?
+  \item What is the right action (shutdown/investment) for this new demand + additional policies?
+
+% the story here is that unrestricted imports allows WI to get to deep carbon reductions with the caveat that there might be deficiencies with the transmission network model description
+
+% The other story here is that we we allow shutdowns then nuclear will turn off by 2030 if carbon emissions stay the same.  This generation is replaced with combustion turbine.  Nucelar, while cheap to run once it's built is still very expensive to maintain (I have confidence in these costs, they are from NREL now). If carbon policies are active and strong (>40% reduction) then nuclear has a very important role to play.
+
+  \includegraphics[width=0.2\textwidth]{includes/leakage_shutdowns_agg_exim.png}
+  \includegraphics[width=0.2\textwidth]{includes/no_leakage_shutdowns_agg_exim.png}
+
+  \includegraphics[width=0.2\textwidth]{includes/leakage_shutdowns_agg_capacity_cntlreg.png}
+  \includegraphics[width=0.2\textwidth]{includes/no_leakage_shutdowns_agg_capacity_cntlreg.png}
+
+  % this is the actual generation for the carbon leak scenario (WI only)
+  \includegraphics[width=0.2\textwidth]{includes/leakage_shutdowns_agg_generation_cntlreg.png}
+
+  % this is the actual generation for the NO carbon leak scenario (WI only)
+  \includegraphics[width=0.2\textwidth]{includes/no_leakage_shutdowns_agg_generation_cntlreg.png}
+
+\end{frame}
+
+
+
+
+% THIS SLIDE SHOWS RESULTS FROM RUNS THAT DID NOT ALLOW SHUTDOWNS
 \begin{frame}
   \frametitle{Carbon leakage}
 
   % this series of maps shows combined cycle generation ramping up and then shutting down.
   % Note that the units here are in % change from baseline for clarity of change
 
+  \item Combined Cycle (natgas) ramps up and then down while... \\
   % 0% reduction (baseline)
-  \includegraphics[width=0.2\textwidth]{includes/no_leakage_CC_r0.png}
+  \includegraphics[width=0.2\textwidth]{includes/no_leakage_no_shutdowns_CC_r0.png}
   % 20% reduction
-  \includegraphics[width=0.2\textwidth]{includes/no_leakage_CC_r1.png}
+  % \includegraphics[width=0.2\textwidth]{includes/no_leakage_no_shutdowns_CC_r1.png}
   % 40% reduction
-  \includegraphics[width=0.2\textwidth]{includes/no_leakage_CC_r2.png}
-  % 60% reduction
-  \includegraphics[width=0.2\textwidth]{includes/no_leakage_CC_r3.png}
+  \includegraphics[width=0.2\textwidth]{includes/no_leakage_no_shutdowns_CC_r2.png}
+  % 60% reductio
+  \includegraphics[width=0.2\textwidth]{includes/no_leakage_no_shutdowns_CC_r3.png}
   % 80% reduction
-  \includegraphics[width=0.2\textwidth]{includes/no_leakage_CC_r4.png}
+  \includegraphics[width=0.2\textwidth]{includes/no_leakage_no_shutdowns_CC_r4.png}
 
+%   % this series of maps shows where wind generation ramps up.
+%   % Note that units here are GWh... it shows the change better because most counties in WI do not currently have wind generation which makes calculating the % change from baseline awkward
+
+
+\item Onshore wind ramps up. \\
+  % 0% reduction (baseline)
+  \includegraphics[width=0.2\textwidth]{includes/no_leakage_no_shutdowns_wind_r0.png}
+  % 20% reduction
+  % \includegraphics[width=0.2\textwidth]{includes/no_leakage_no_shutdowns_wind_r1.png}
+  % 40% reduction
+  \includegraphics[width=0.2\textwidth]{includes/no_leakage_no_shutdowns_wind_r2.png}
+  % 60% reduction
+  \includegraphics[width=0.2\textwidth]{includes/no_leakage_no_shutdowns_wind_r3.png}
+  % 80% reduction
+  \includegraphics[width=0.2\textwidth]{includes/no_leakage_no_shutdowns_wind_r4.png}
+%
 \end{frame}
 
+
+
+
+% THIS SLIDE SHOWS RESULTS FROM RUNS THAT DID ALLOW SHUTDOWNS
 \begin{frame}
   \frametitle{Carbon leakage}
 
-  % this series of maps shows where wind generation ramps up.
+  % this series of maps shows combustion turbine generation ramping down.
+
+  \item Combustion Turbine (natgas) ramps down while... \\
+  % 0% reduction (baseline)
+  \includegraphics[width=0.2\textwidth]{includes/no_leakage_shutdowns_CT_r0.png}
+  % 20% reduction
+  % \includegraphics[width=0.2\textwidth]{includes/no_leakage_shutdowns_CT_r1.png}
+  % 40% reduction
+  \includegraphics[width=0.2\textwidth]{includes/no_leakage_shutdowns_CT_r2.png}
+  % 60% reduction
+  \includegraphics[width=0.2\textwidth]{includes/no_leakage_shutdowns_CT_r3.png}
+  % 80% reduction
+  \includegraphics[width=0.2\textwidth]{includes/no_leakage_shutdowns_CT_r4.png}
+
   % Note that units here are GWh... it shows the change better because most counties in WI do not currently have wind generation which makes calculating the % change from baseline awkward
 
-  % all the wind here is onshore
 
+\item Onshore wind ramps up.\\
   % 0% reduction (baseline)
-  \includegraphics[width=0.2\textwidth]{includes/no_leakage_wind_r0.png}
+  \includegraphics[width=0.2\textwidth]{includes/no_leakage_shutdowns_wind_r0.png}
   % 20% reduction
-  \includegraphics[width=0.2\textwidth]{includes/no_leakage_wind_r1.png}
+  % \includegraphics[width=0.2\textwidth]{includes/no_leakage_shutdowns_wind_r1.png}
   % 40% reduction
-  \includegraphics[width=0.2\textwidth]{includes/no_leakage_wind_r2.png}
+  \includegraphics[width=0.2\textwidth]{includes/no_leakage_shutdowns_wind_r2.png}
   % 60% reduction
-  \includegraphics[width=0.2\textwidth]{includes/no_leakage_wind_r3.png}
+  \includegraphics[width=0.2\textwidth]{includes/no_leakage_shutdowns_wind_r3.png}
   % 80% reduction
-  \includegraphics[width=0.2\textwidth]{includes/no_leakage_wind_r4.png}
-
-\end{frame}
-
-
-
-
-  % % this is where combined cycle is built under at 40% carbon emissions reductions
-  % \includegraphics[width=0.2\textwidth]{includes/no_leakage_CC_r3_built_cap.png}
-  %
-  % % this is where wind is built under at 60% carbon emissions reductions
-  % \includegraphics[width=0.2\textwidth]{includes/no_leakage_wind_r4_built_cap.png}
-  %
-  % % this is where wind is built under at 80% carbon emissions reductions
-  % \includegraphics[width=0.2\textwidth]{includes/no_leakage_wind_r5_built_cap.png}
-
-
-
-
-\end{frame}
-
-
-\begin{frame}
-  \frametitle{Increased demand}
-
-Cost effects (and possible changes in portfolio of generation) when
-have increased demand.  Flat imports.
-
-% I assume flat imports = to the baseline scenario, exports are not limited
-% I increase the load by a factor for all regions and all load blocks
-
-% the story here is that even modest increases in demand (5%) lead to big changes.  new demand is met with expansion in nat-gas technologies (combustion turbine and combine cycle plants)
-
-% also pushes WI into a net exporter of energy
-
-% this shows the increase in emissions for both control regions (WI) and non-control regions
-\includegraphics[width=0.20\textwidth]{includes/demand_agg_emissions.png}
-
-% this shows the impact on power flows through the network (no leakage assumption)
-\includegraphics[width=0.20\textwidth]{includes/demand_agg_exim.png}
-
-% shows generation portfolio in WI
-\includegraphics[width=0.20\textwidth]{includes/demand_agg_generation_cntlreg.png}
-
-% shows investment costs by region (note that model is restricted to only allow investments in WI)
-\includegraphics[width=0.20\textwidth]{includes/demand_invest_costs_by_region.png.png}
-
-% shows operational costs by region
-\includegraphics[width=0.20\textwidth]{includes/demand_operate_costs_by_region.png}
-
-
-
+  \includegraphics[width=0.2\textwidth]{includes/no_leakage_shutdowns_wind_r4.png}
+%
 \end{frame}
 
 
 
 
 
-\begin{frame}
-  \frametitle{Environmental constraints: Capacity or CO2 reduction}
-
-Reduce capacity of plants compared to reduction in CO2 emissions. Flat imports.
-\begin{enumerate}
-\item Reduce \alert{CO2 emissions} compared with 2017:
-\item Reduce \alert{non-renewable capacity} compared with 2017:
-\item Reduce \alert{non-renewable generation} compared with 2017:
-\end{enumerate}
-
-\end{frame}
-
-\begin{frame}
-  \frametitle{Limits on technology expansion}
-
-Could limit capacity expansion on certain technologies, or could have flat imports on non-renewable generation and different limits on non-renewable imports.   Or could just limit wind and see what takes up the slack (with flat imports).
-\end{frame}
-
-\begin{frame}
-  \frametitle{Conclusions}
-  \begin{itemize}
-  \item Models can inform policy
-  \item Models can show effects and costs of constraints
-  \item Investment is coupled to reliability
-      \item The model is currently being refined, and we are interested to get feedback from utility and policy experts about how this model would be useful in your utility and regulatory planning efforts (by April-May)
-  \item  here's how to get in touch with us if you should be interested in a one-on-one demonstration of the model and/or a brief interview to discuss possible policy interventions - we would anticipate after this first round of WEREWOLF (funded by TT Center) that we will be exploring additional opportunities to partner with stakeholders to further evolve the model with the goal of making it as useful as possible to policy stakeholders (such as through ARPA-E or other funding sources down the road).
-  \end{itemize}
-\end{frame}
-
-\appendix
-
-\begin{frame}
-In the Appendix, you could include information about the model (the
-current slides 4, 5) for example.
-\begin{itemize}
-  \item \color{black} Very large scale models (many agents with many instruments
-    acting strategically) with risk are hard
-  \item \alert{New algorithms enable solution of more detailed,
-      authentic problems and address underlying policy questions}
-  \item Evaluation via simulation computations and out-of-sample testing
-\end{itemize}
-\end{frame}
 
 
-\begin{frame}
-  \frametitle{Technology choices as $\theta$ increases (NR capacity redn)}
 
-  \includegraphics[width=4.8in]{includes/Scaprednv20.png} \\
-%\makebox[\linewidth]{\includegraphics[clip,trim=0.1cm 0.2cm 0.1cm
-%  1.6cm,page=30,width=5.2in]{OFBPhilpottv2.pdf}}
-  \begin{itemize}
-  \item Use geothermal, CCS, wind, batteries
-  \item Fairly constant capacity
-  \end{itemize}
-\end{frame}
 
-\begin{frame}
-  \frametitle{Technology choices as $\theta$ increases (\% CO2 redn)}
-
-  \includegraphics[width=4.8in]{includes/Sco2rednv20.png} \\
-%\makebox[\linewidth]{\includegraphics[clip,trim=0.1cm 0.2cm 0.1cm
-% 1.6cm,page=30,width=5.2in]{OFBPhilpottv2.pdf}}
-  \begin{itemize}
-  \item Rich portfolio of renewable technologies used
-  \item More capacity needed as more uncertain generation
-  \end{itemize}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Technology choices as carbon price (\$ per MW) increases}
-
-  \includegraphics[width=4.8in]{includes/Sco2incrv20.png}
-%\makebox[\linewidth]{\includegraphics[clip,trim=0.1cm 0.2cm 0.1cm
-%  1.6cm,page=30,width=5.2in]{OFBPhilpottv2.pdf}}
-\end{frame}
-
-\begin{frame}
-  \frametitle{CO2 reduction (constraint or carbon tax)}
-
-    \includegraphics[width=0.5\textwidth]{includes/TotalCarbonSinglev20.png}
-    \includegraphics[width=0.5\textwidth]{includes/TotalCarbonincrv20.png}
-
-\end{frame}
-
-\begin{frame}
-  \frametitle{Technologies (chance constraints):
-    cf. increased uptake}
-
-\centering
-Force zero emissions in at least 50\% of years (normal hydrology)\\
-\includegraphics[clip,trim=1.25cm 0.95cm 0.0cm 0.0cm,height=2.8cm]{includes/SccConstraint.png}
-\includegraphics[clip,trim=1.25cm 0.95cm 5.1cm 0.0cm,height=2.8cm]{includes/SccConstraintv20.png}\\
-  \includegraphics[width=0.4\textwidth]{includes/CCvalues.png}\qquad
-  \includegraphics[width=0.4\textwidth]{includes/CCvaluesv20.png}\\
-
-  Nonzero CO$_{2}$ emissions in 6 out of the 13 scenarios\\
-  Average level of CO$_{2}$ emissions (0.138 Mt) or approx 95.4\% redn
-
-\end{frame}
+% \begin{frame}
+%   \frametitle{Increased demand}
+%
+% Cost effects (and possible changes in portfolio of generation) when
+% have increased demand.  Flat imports.
+%
+% % I assume flat imports = to the baseline scenario, exports are not limited
+% % I increase the load by a factor for all regions and all load blocks
+%
+% % the story here is that even modest increases in demand (5%) lead to big changes.  new demand is met with expansion in nat-gas technologies (combustion turbine and combine cycle plants)
+%
+% % also pushes WI into a net exporter of energy
+%
+% % this shows the increase in emissions for both control regions (WI) and non-control regions
+% \includegraphics[width=0.20\textwidth]{includes/demand_agg_emissions.png}
+%
+% % this shows the impact on power flows through the network (no leakage assumption)
+% \includegraphics[width=0.20\textwidth]{includes/demand_agg_exim.png}
+%
+% % shows generation portfolio in WI
+% \includegraphics[width=0.20\textwidth]{includes/demand_agg_generation_cntlreg.png}
+%
+% % shows investment costs by region (note that model is restricted to only allow investments in WI)
+% \includegraphics[width=0.20\textwidth]{includes/demand_invest_costs_by_region.png.png}
+%
+% % shows operational costs by region
+% \includegraphics[width=0.20\textwidth]{includes/demand_operate_costs_by_region.png}
+%
+%
+%
+% \end{frame}
+%
+%
+%
+%
+%
+% \begin{frame}
+%   \frametitle{Environmental constraints: Capacity or CO2 reduction}
+%
+% Reduce capacity of plants compared to reduction in CO2 emissions. Flat imports.
+% \begin{enumerate}
+% \item Reduce \alert{CO2 emissions} compared with 2017:
+% \item Reduce \alert{non-renewable capacity} compared with 2017:
+% \item Reduce \alert{non-renewable generation} compared with 2017:
+% \end{enumerate}
+%
+% \end{frame}
+%
+% \begin{frame}
+%   \frametitle{Limits on technology expansion}
+%
+% Could limit capacity expansion on certain technologies, or could have flat imports on non-renewable generation and different limits on non-renewable imports.   Or could just limit wind and see what takes up the slack (with flat imports).
+% \end{frame}
+%
+% \begin{frame}
+%   \frametitle{Conclusions}
+%   \begin{itemize}
+%   \item Models can inform policy
+%   \item Models can show effects and costs of constraints
+%   \item Investment is coupled to reliability
+%       \item The model is currently being refined, and we are interested to get feedback from utility and policy experts about how this model would be useful in your utility and regulatory planning efforts (by April-May)
+%   \item  here's how to get in touch with us if you should be interested in a one-on-one demonstration of the model and/or a brief interview to discuss possible policy interventions - we would anticipate after this first round of WEREWOLF (funded by TT Center) that we will be exploring additional opportunities to partner with stakeholders to further evolve the model with the goal of making it as useful as possible to policy stakeholders (such as through ARPA-E or other funding sources down the road).
+%   \end{itemize}
+% \end{frame}
+%
+% \appendix
+%
+% \begin{frame}
+% In the Appendix, you could include information about the model (the
+% current slides 4, 5) for example.
+% \begin{itemize}
+%   \item \color{black} Very large scale models (many agents with many instruments
+%     acting strategically) with risk are hard
+%   \item \alert{New algorithms enable solution of more detailed,
+%       authentic problems and address underlying policy questions}
+%   \item Evaluation via simulation computations and out-of-sample testing
+% \end{itemize}
+% \end{frame}
+%
+%
+% \begin{frame}
+%   \frametitle{Technology choices as $\theta$ increases (NR capacity redn)}
+%
+%   \includegraphics[width=4.8in]{includes/Scaprednv20.png} \\
+% %\makebox[\linewidth]{\includegraphics[clip,trim=0.1cm 0.2cm 0.1cm
+% %  1.6cm,page=30,width=5.2in]{OFBPhilpottv2.pdf}}
+%   \begin{itemize}
+%   \item Use geothermal, CCS, wind, batteries
+%   \item Fairly constant capacity
+%   \end{itemize}
+% \end{frame}
+%
+% \begin{frame}
+%   \frametitle{Technology choices as $\theta$ increases (\% CO2 redn)}
+%
+%   \includegraphics[width=4.8in]{includes/Sco2rednv20.png} \\
+% %\makebox[\linewidth]{\includegraphics[clip,trim=0.1cm 0.2cm 0.1cm
+% % 1.6cm,page=30,width=5.2in]{OFBPhilpottv2.pdf}}
+%   \begin{itemize}
+%   \item Rich portfolio of renewable technologies used
+%   \item More capacity needed as more uncertain generation
+%   \end{itemize}
+% \end{frame}
+%
+% \begin{frame}
+%   \frametitle{Technology choices as carbon price (\$ per MW) increases}
+%
+%   \includegraphics[width=4.8in]{includes/Sco2incrv20.png}
+% %\makebox[\linewidth]{\includegraphics[clip,trim=0.1cm 0.2cm 0.1cm
+% %  1.6cm,page=30,width=5.2in]{OFBPhilpottv2.pdf}}
+% \end{frame}
+%
+% \begin{frame}
+%   \frametitle{CO2 reduction (constraint or carbon tax)}
+%
+%     \includegraphics[width=0.5\textwidth]{includes/TotalCarbonSinglev20.png}
+%     \includegraphics[width=0.5\textwidth]{includes/TotalCarbonincrv20.png}
+%
+% \end{frame}
+%
+% \begin{frame}
+%   \frametitle{Technologies (chance constraints):
+%     cf. increased uptake}
+%
+% \centering
+% Force zero emissions in at least 50\% of years (normal hydrology)\\
+% \includegraphics[clip,trim=1.25cm 0.95cm 0.0cm 0.0cm,height=2.8cm]{includes/SccConstraint.png}
+% \includegraphics[clip,trim=1.25cm 0.95cm 5.1cm 0.0cm,height=2.8cm]{includes/SccConstraintv20.png}\\
+%   \includegraphics[width=0.4\textwidth]{includes/CCvalues.png}\qquad
+%   \includegraphics[width=0.4\textwidth]{includes/CCvaluesv20.png}\\
+%
+%   Nonzero CO$_{2}$ emissions in 6 out of the 13 scenarios\\
+%   Average level of CO$_{2}$ emissions (0.138 Mt) or approx 95.4\% redn
+%
+% \end{frame}
 
 \end{document}
