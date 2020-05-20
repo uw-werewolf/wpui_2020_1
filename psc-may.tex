@@ -217,12 +217,15 @@ To gather their interest, we should focus on the value proposition for WEREWOLF 
   \item Data is adapted from EPA NEEDS/Integrated Planning Model, NREL
     ReEDS model data, NREL Annual Technology Baseline and other
     sources
+    \color{blue}
   \item After data initialization, each run takes $\approx 30$ mins to generate
     the following results
   \item Show effects of strategies driving towards 100\% carbon free
     energy by 2050, coal plant closures, rapid deployment of
     renewables, increase in electric vehicle (EV) uptake, for example
   \item How could this help with SEA?
+  \item \alert{Demand in 2030 is a data input, what generation portfolio
+    needed for this new demand?}
   \end{itemize}
 
 \end{frame}
@@ -246,24 +249,22 @@ For the appendix, I am wondering if we could do a better job on the data (slide 
 
 % THIS SLIDE SHOWS RESULTS FROM RUNS THAT DID NOT ALLOW SHUTDOWNS
 \begin{frame}
-  \frametitle{Carbon reductions (with/without shutdowns)}
+  \frametitle{Increasing carbon reductions (without/with shutdowns)}
 
-\begin{itemize}
-  \item Demand in 2030 is a data input, what generation portfolio
-    needed for this new demand under increasing carbon reduction requirement
-  \item Costs, capacity mix,  generation
-\end{itemize}
+%  \begin{itemize}
+%  \item Increasing carbon reduction requirement, capacity mix,  generation
+%\end{itemize}
 % the story here is that unrestricted imports allows WI to get to deep carbon reductions with the caveat that there might be deficiencies with the transmission network model description
 
-  \includegraphics[width=0.32\textwidth]{includes/no_leakage_no_shutdowns_agg_exim.png}
-  \includegraphics[width=0.32\textwidth]{includes/no_leakage_no_shutdowns_agg_capacity_cntlreg.png}
+%  \includegraphics[width=0.32\textwidth]{includes/no_leakage_no_shutdowns_agg_exim.png}
+  \includegraphics[width=0.48\textwidth]{includes/no_leakage_no_shutdowns_agg_capacity_cntlreg.png}
 % this is the actual generation for the NO carbon leak scenario (WI only)
-  \includegraphics[width=0.32\textwidth]{includes/no_leakage_no_shutdowns_agg_generation_cntlreg.png}
+  \includegraphics[width=0.46\textwidth]{includes/no_leakage_no_shutdowns_agg_generation_cntlreg.png}
 
-    \includegraphics[width=0.32\textwidth]{includes/no_leakage_shutdowns_agg_exim.png}
-  \includegraphics[width=0.32\textwidth]{includes/no_leakage_shutdowns_agg_capacity_cntlreg.png}
+%  \includegraphics[width=0.32\textwidth]{includes/no_leakage_shutdowns_agg_exim.png}
+  \includegraphics[width=0.48\textwidth]{includes/no_leakage_shutdowns_agg_capacity_cntlreg.png}
 % this is the actual generation for the NO carbon leak scenario (WI only)
-  \includegraphics[width=0.32\textwidth]{includes/no_leakage_shutdowns_agg_generation_cntlreg.png}
+  \includegraphics[width=0.46\textwidth]{includes/no_leakage_shutdowns_agg_generation_cntlreg.png}
 
 \end{frame}
 % Reductions in coal, increase in gas
@@ -278,15 +279,15 @@ For the appendix, I am wondering if we could do a better job on the data (slide 
 
   Combined Cycle (natgas) ramps up and then down while... \\
   % 0% reduction (baseline)
-  \includegraphics[width=0.22\textwidth]{includes/no_leakage_no_shutdowns_CC_r0.png}
+  \includegraphics[width=0.25\textwidth]{includes/no_leakage_no_shutdowns_CC_r0.png}
   % 20% reduction
   % \includegraphics[width=0.25\textwidth]{includes/no_leakage_no_shutdowns_CC_r1.png}
   % 40% reduction
-  \includegraphics[width=0.22\textwidth]{includes/no_leakage_no_shutdowns_CC_r2.png}
+  \includegraphics[width=0.25\textwidth]{includes/no_leakage_no_shutdowns_CC_r2.png}
   % 60% reductio
-  \includegraphics[width=0.22\textwidth]{includes/no_leakage_no_shutdowns_CC_r3.png}
+  \includegraphics[width=0.25\textwidth]{includes/no_leakage_no_shutdowns_CC_r3.png}
   % 80% reduction
-  \includegraphics[width=0.22\textwidth]{includes/no_leakage_no_shutdowns_CC_r4.png}
+  \includegraphics[width=0.25\textwidth]{includes/no_leakage_no_shutdowns_CC_r4.png}
 
 %   % this series of maps shows where wind generation ramps up.
 %   % Note that units here are GWh... it shows the change better because most counties in WI do not currently have wind generation which makes calculating the % change from baseline awkward
@@ -294,15 +295,15 @@ For the appendix, I am wondering if we could do a better job on the data (slide 
 
   Onshore wind ramps up. \\
   % 0% reduction (baseline)
-  \includegraphics[width=0.22\textwidth]{includes/no_leakage_no_shutdowns_wind_r0.png}
+  \includegraphics[width=0.25\textwidth]{includes/no_leakage_no_shutdowns_wind_r0.png}
   % 20% reduction
   % \includegraphics[width=0.25\textwidth]{includes/no_leakage_no_shutdowns_wind_r1.png}
   % 40% reduction
-  \includegraphics[width=0.22\textwidth]{includes/no_leakage_no_shutdowns_wind_r2.png}
+  \includegraphics[width=0.25\textwidth]{includes/no_leakage_no_shutdowns_wind_r2.png}
   % 60% reduction
-  \includegraphics[width=0.22\textwidth]{includes/no_leakage_no_shutdowns_wind_r3.png}
+  \includegraphics[width=0.25\textwidth]{includes/no_leakage_no_shutdowns_wind_r3.png}
   % 80% reduction
-  \includegraphics[width=0.22\textwidth]{includes/no_leakage_no_shutdowns_wind_r4.png}
+  \includegraphics[width=0.25\textwidth]{includes/no_leakage_no_shutdowns_wind_r4.png}
 \end{frame}
 
 % THIS SLIDE SHOWS RESULTS FROM RUNS THAT DID ALLOW SHUTDOWNS
@@ -311,28 +312,28 @@ For the appendix, I am wondering if we could do a better job on the data (slide 
   % this series of maps shows combustion turbine generation ramping down.
   Combustion Turbine (natgas) ramps down while... \\
   % 0% reduction (baseline)
-  \includegraphics[width=0.22\textwidth]{includes/no_leakage_shutdowns_CT_r0.png}
+  \includegraphics[width=0.25\textwidth]{includes/no_leakage_shutdowns_CT_r0.png}
   % 20% reduction
   % \includegraphics[width=0.25\textwidth]{includes/no_leakage_shutdowns_CT_r1.png}
   % 40% reduction
-  \includegraphics[width=0.22\textwidth]{includes/no_leakage_shutdowns_CT_r2.png}
+  \includegraphics[width=0.25\textwidth]{includes/no_leakage_shutdowns_CT_r2.png}
   % 60% reduction
-  \includegraphics[width=0.22\textwidth]{includes/no_leakage_shutdowns_CT_r3.png}
+  \includegraphics[width=0.25\textwidth]{includes/no_leakage_shutdowns_CT_r3.png}
   % 80% reduction
-  \includegraphics[width=0.22\textwidth]{includes/no_leakage_shutdowns_CT_r4.png}
+  \includegraphics[width=0.25\textwidth]{includes/no_leakage_shutdowns_CT_r4.png}
 
   % Note that units here are GWh... it shows the change better because most counties in WI do not currently have wind generation which makes calculating the % change from baseline awkward
   Onshore wind ramps up.\\
   % 0% reduction (baseline)
-  \includegraphics[width=0.22\textwidth]{includes/no_leakage_shutdowns_wind_r0.png}
+  \includegraphics[width=0.25\textwidth]{includes/no_leakage_shutdowns_wind_r0.png}
   % 20% reduction
   % \includegraphics[width=0.25\textwidth]{includes/no_leakage_shutdowns_wind_r1.png}
   % 40% reduction
-  \includegraphics[width=0.22\textwidth]{includes/no_leakage_shutdowns_wind_r2.png}
+  \includegraphics[width=0.25\textwidth]{includes/no_leakage_shutdowns_wind_r2.png}
   % 60% reduction
-  \includegraphics[width=0.22\textwidth]{includes/no_leakage_shutdowns_wind_r3.png}
+  \includegraphics[width=0.25\textwidth]{includes/no_leakage_shutdowns_wind_r3.png}
   % 80% reduction
-  \includegraphics[width=0.22\textwidth]{includes/no_leakage_shutdowns_wind_r4.png}
+  \includegraphics[width=0.25\textwidth]{includes/no_leakage_shutdowns_wind_r4.png}
 \end{frame}
 
 \begin{frame}  \frametitle{Increased demand from EVs -- Shutdowns Allowed}
@@ -342,8 +343,8 @@ For the appendix, I am wondering if we could do a better job on the data (slide 
   \item Single daily peak occurs at 5:30pm (charging occurs primarily after work)
 \end{itemize}
 
-\includegraphics[width=0.45\textwidth]{includes/LDC_5pct_EVs_IL_CHI.png}    
-\includegraphics[width=0.45\textwidth]{includes/LDC_20pct_EVs_IL_CHI.png}    
+\includegraphics[width=0.49\textwidth]{includes/LDC_5pct_EVs_IL_CHI.png}    
+\includegraphics[width=0.49\textwidth]{includes/LDC_20pct_EVs_IL_CHI.png}    
       
 \end{frame}
 
@@ -397,17 +398,17 @@ For the appendix, I am wondering if we could do a better job on the data (slide 
   \frametitle{Limit non-renewable capacity}
   Expansion of combustion turbines for 2030, but then they ramp down
   as nonrenewable capacity allowed shrinks, cost increase significant\\
-  \includegraphics[width=0.32\textwidth]{includes/no_leakage_shutdowns_agg_generation_cntlreg.png}
+  \includegraphics[width=0.333\textwidth]{includes/no_leakage_shutdowns_agg_generation_cntlreg.png}
   % this is the actual generation for the NO carbon leak scenario (WI only)
-  \includegraphics[width=0.32\textwidth]{includes/no_leakage_maxNR_agg_generation_cntlreg.png}
-  \includegraphics[width=0.32\textwidth]{includes/no_leakage_maxNR_invest_costs_by_region.png}
+  \includegraphics[width=0.333\textwidth]{includes/no_leakage_maxNR_agg_generation_cntlreg.png}
+  \includegraphics[width=0.333\textwidth]{includes/no_leakage_maxNR_invest_costs_by_region.png}
 
-  Solar deployment ramps up is specific locations... \\
-  \includegraphics[width=0.22\textwidth]{includes/no_leakage_maxNR_solar_r0.png}
+  Solar deployment increases in specific locations... \\
+  \includegraphics[width=0.25\textwidth]{includes/no_leakage_maxNR_solar_r0.png}
 %  \includegraphics[width=0.25\textwidth]{includes/no_leakage_maxNR_solar_r1.png}
-  \includegraphics[width=0.22\textwidth]{includes/no_leakage_maxNR_solar_r2.png}
-  \includegraphics[width=0.22\textwidth]{includes/no_leakage_maxNR_solar_r3.png}
-  \includegraphics[width=0.22\textwidth]{includes/no_leakage_maxNR_solar_r4.png}
+  \includegraphics[width=0.25\textwidth]{includes/no_leakage_maxNR_solar_r2.png}
+  \includegraphics[width=0.25\textwidth]{includes/no_leakage_maxNR_solar_r3.png}
+  \includegraphics[width=0.25\textwidth]{includes/no_leakage_maxNR_solar_r4.png}
 
 \end{frame}
 
